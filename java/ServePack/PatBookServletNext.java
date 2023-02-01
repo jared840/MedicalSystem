@@ -53,7 +53,7 @@ public class PatBookServletNext extends HttpServlet {
 		//boolean worked=false;
 		
 		try {
-			Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/medicalSystem", "root", "vick-newton7.1");
+			Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/medicalSystem", "root", "password");
 
 			String the_query="SELECT Lname FROM DOCTOR WHERE ClinicName=?";
 			PreparedStatement ppp=conn.prepareStatement(the_query);
