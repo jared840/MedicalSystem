@@ -87,7 +87,7 @@ public class DocLogServ extends HttpServlet {
 			//new as of 11-19:
 			
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			 Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/medicalSystem", "root", "vick-newton7.1");
+			 Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/medicalSystem", "root", "password");
 			
 			 String query="SELECT COUNT(*) FROM DOCTOR WHERE username=?";
 				PreparedStatement prep=conn.prepareStatement(query);
