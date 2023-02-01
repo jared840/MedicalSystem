@@ -45,7 +45,7 @@ public class SearchDocServ extends HttpServlet {
 			try {
 				Class.forName("com.mysql.cj.jdbc.Driver");
 
-			Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/medicalSystem", "root", "vick-newton7.1");
+			Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/medicalSystem", "root", "password");
 			
 			if(searchtype=="MyClinicOnly"||searchtype.equals("MyClinicOnly")) {
 				
