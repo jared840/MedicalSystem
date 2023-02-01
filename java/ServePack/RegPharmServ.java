@@ -68,7 +68,7 @@ public class RegPharmServ extends HttpServlet {
 			//dbConnect db = new dbConnect();
 			
 			 Class.forName("com.mysql.cj.jdbc.Driver");
-			    Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/medicalSystem", "root", "vick-newton7.1");
+			    Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/medicalSystem", "root", "password");
 
 			
 			String query="INSERT INTO PHARMACIST VALUES(?,?,?,?,?,?)";
