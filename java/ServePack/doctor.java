@@ -119,7 +119,7 @@ public class doctor implements Serializable{
     {
         try
         {
-            Connection conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/medicalSystem", "root", "vick-newton7.1");
+            Connection conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/medicalSystem", "root", "password");
             String q="INSERT INTO Drugs Values(NULL, NULL, ?)";
             PreparedStatement p=conn.prepareStatement(q);
             p.setString(1, dName);
@@ -141,7 +141,7 @@ public class doctor implements Serializable{
         try
         {
             int i=0;
-            Connection conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/medicalSystem", "root", "vick-newton7.1");
+            Connection conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/medicalSystem", "root", "password");
             String str="SELECT COUNT(*) FROM PATIENT_MEDICALHIS WHERE ID=?";
             PreparedStatement pp=conn.prepareStatement(str);
             pp.setInt(1, pID);
@@ -196,7 +196,7 @@ public class doctor implements Serializable{
         try
         {
             int i=0;
-            Connection conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/medicalSystem", "root", "vick-newton7.1");
+            Connection conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/medicalSystem", "root", "password");
             String str="SELECT COUNT(*) FROM PATIENT_CONDITIONS WHERE ID=?";
             PreparedStatement pp=conn.prepareStatement(str);
             pp.setInt(1, pID);
@@ -250,7 +250,7 @@ public class doctor implements Serializable{
     {
         try
         {
-            connx=DriverManager.getConnection("jdbc:mysql://localhost:3306/medicalSystem", "root", "vick-newton7.1");
+            connx=DriverManager.getConnection("jdbc:mysql://localhost:3306/medicalSystem", "root", "password");
             String q="SELECT HAS.AppointmentNumber, AppointmentType, TimeDate, Appointment.ID FROM Appointment, HAS WHERE HAS.DoctorID=? AND Appointment.AppointmentNumber=HAS.AppointmentNumber";
             PreparedStatement pre=connx.prepareStatement(q);
             pre.setInt(1, personID);
@@ -269,7 +269,7 @@ public class doctor implements Serializable{
     {
         try
         {
-             connx=DriverManager.getConnection("jdbc:mysql://localhost:3306/medicalSystem", "root", "vick-newton7.1");
+             connx=DriverManager.getConnection("jdbc:mysql://localhost:3306/medicalSystem", "root", "password");
             String w="SELECT Conditions FROM PATIENT_CONDITIONS WHERE ID=?";
             PreparedStatement e=connx.prepareStatement(w);
             e.setInt(1, pID);
@@ -287,7 +287,7 @@ public class doctor implements Serializable{
     {
         try
         {
-           connx=DriverManager.getConnection("jdbc:mysql://localhost:3306/medicalSystem", "root", "vick-newton7.1");
+           connx=DriverManager.getConnection("jdbc:mysql://localhost:3306/medicalSystem", "root", "password");
             String query="SELECT MedicalHistory FROM PATIENT_MEDICALHIS WHERE ID=?";
             PreparedStatement prepo=connx.prepareStatement(query);
             prepo.setInt(1, pID);
@@ -308,7 +308,7 @@ public class doctor implements Serializable{
     ResultSet getSchedule(String u)
     {
         try{
-        connx= DriverManager.getConnection("jdbc:mysql://localhost:3306/medicalSystem", "root", "vick-newton7.1");
+        connx= DriverManager.getConnection("jdbc:mysql://localhost:3306/medicalSystem", "root", "password");
         String q="SELECT Fname, Lname, ClinicName, Hours, VacatonDays, Days FROM doctor, doctorschedule WHERE doctor.username=doctorschedule.username AND doctorschedule.username=?";
             PreparedStatement p=connx.prepareStatement(q);
             p.setString(1, u);
@@ -335,7 +335,7 @@ public class doctor implements Serializable{
     {
       int elv=0;
         try{
-       Connection conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/medicalSystem", "root", "vick-newton7.1");
+       Connection conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/medicalSystem", "root", "password");
        
       //int got_id=0;
        
@@ -405,7 +405,7 @@ public class doctor implements Serializable{
     {
         try
         {
-            Connection conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/medicalSystem", "root", "vick-newton7.1");
+            Connection conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/medicalSystem", "root", "password");
             String q="UPDATE nurse SET ClinicName=? WHERE ID=?";
             PreparedStatement p=conn.prepareStatement(q);
             p.setString(1, clinicname);
@@ -432,7 +432,7 @@ public class doctor implements Serializable{
     {
         try
         {
-            Connection conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/medicalSystem", "root", "vick-newton7.1");
+            Connection conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/medicalSystem", "root", "password");
             String s="SELECT ID FROM doctor WHERE username=?";
             PreparedStatement prepare=conn.prepareStatement(s);
             prepare.setString(1, dUser);
@@ -462,7 +462,7 @@ public class doctor implements Serializable{
 
         try
         {
-            connx=DriverManager.getConnection("jdbc:mysql://localhost:3306/medicalSystem", "root", "vick-newton7.1");
+            connx=DriverManager.getConnection("jdbc:mysql://localhost:3306/medicalSystem", "root", "password");
             String qu="SELECT Name,Prescribed,DoctorNotes,Dosage FROM prescribes WHERE PatientID=? AND username=?";
             PreparedStatement pre=connx.prepareStatement(qu);
             pre.setInt(1, pID);
@@ -480,7 +480,7 @@ public class doctor implements Serializable{
     {
         try
         {
-            Connection conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/medicalSystem", "root", "vick-newton7.1");
+            Connection conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/medicalSystem", "root", "password");
             String q="INSERT INTO prescribes VALUES(?,?,?,?,?,?,?)";
             PreparedStatement p=conn.prepareStatement(q);
             p.setInt(1, dID);
@@ -509,7 +509,7 @@ public class doctor implements Serializable{
     {
         try
         {
-            connx=DriverManager.getConnection("jdbc:mysql://localhost:3306/medicalSystem", "root", "vick-newton7.1");
+            connx=DriverManager.getConnection("jdbc:mysql://localhost:3306/medicalSystem", "root", "password");
             String query="SELECT ID FROM nurse WHERE Fname=? AND Lname=?";
             PreparedStatement prepared=connx.prepareStatement(query);
             prepared.setString(1, f);
@@ -533,7 +533,7 @@ public class doctor implements Serializable{
     Boolean assignDrugs(String drugName,String docUser, String prescribedDate, int patientID, String docNotes, String dose) {
     	int elv=0;
         try{
-       Connection conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/medicalSystem", "root", "vick-newton7.1");
+       Connection conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/medicalSystem", "root", "password");
        
       //int got_id=0;
        
