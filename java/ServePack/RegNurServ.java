@@ -55,7 +55,7 @@ public class RegNurServ extends HttpServlet {
 			//new as of 11-18:
 			
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			 Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/medicalSystem", "root", "vick-newton7.1");
+			 Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/medicalSystem", "root", "password");
 			
 			 String query="INSERT INTO NURSE VALUES(?,?,?,?,?,?,?)";
 				PreparedStatement prep=conn.prepareStatement(query);
