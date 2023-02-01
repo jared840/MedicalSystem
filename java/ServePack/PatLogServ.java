@@ -86,7 +86,7 @@ public class PatLogServ extends HttpServlet {
 			
 			
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			 Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/medicalSystem", "root", "vick-newton7.1");
+			 Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/medicalSystem", "root", "password");
 			
 			 String query="SELECT COUNT(*) FROM PATIENT WHERE username=?";
 				PreparedStatement prep=conn.prepareStatement(query);
