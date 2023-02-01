@@ -52,7 +52,7 @@ public class PatBookServ extends HttpServlet {
 		
 		patient pat=new patient();
 		try {
-			  Connection conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/medicalSystem", "root", "vick-newton7.1");
+			  Connection conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/medicalSystem", "root", "password");
 	            String getid="SELECT ID FROM PATIENT WHERE USERNAME=?";
 	            PreparedStatement prp=conn.prepareStatement(getid);
 	            prp.setString(1, usename);
@@ -73,7 +73,7 @@ public class PatBookServ extends HttpServlet {
 			
 			//new as of 12-01:+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 			
-			 //Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/medicalSystem", "root", "vick-newton7.1");
+			 //Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/medicalSystem", "root", "password");
 				
 			 String query="SELECT * FROM CLINIC";
 				PreparedStatement prep=conn.prepareStatement(query);
