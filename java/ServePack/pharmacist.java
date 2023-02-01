@@ -77,7 +77,7 @@ public class pharmacist {
     }
     
     Boolean orderDrug(String name, String sideEffects, String company) {
-		Connection conn; //= DriverManager.getConnection("jdbc:mysql://localhost:3306/medicalSystem", "root", "vick-newton7.1");
+		Connection conn; //= DriverManager.getConnection("jdbc:mysql://localhost:3306/medicalSystem", "root", "password");
 
 		String query;
 		PreparedStatement prep;
@@ -85,7 +85,7 @@ public class pharmacist {
 		
 		
     	try {
-			conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/medicalSystem", "root", "vick-newton7.1");
+			conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/medicalSystem", "root", "password");
 			
 			query="INSERT INTO DRUGS VALUES(?,?,?)";
 			
@@ -111,7 +111,7 @@ public class pharmacist {
     {
         try
         {
-            connx=DriverManager.getConnection("jdbc:mysql://localhost:3306/medicalSystem", "root", "vick-newton7.1");
+            connx=DriverManager.getConnection("jdbc:mysql://localhost:3306/medicalSystem", "root", "password");
             String q="SELECT Name FROM DRUGS WHERE Company IS NULL AND SideEffects IS NULL";
             PreparedStatement pre=connx.prepareStatement(q);
             ResultSet re=pre.executeQuery();
@@ -128,7 +128,7 @@ public class pharmacist {
     {
         try
         {
-            Connection conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/medicalSystem", "root", "vick-newton7.1");
+            Connection conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/medicalSystem", "root", "password");
             String s="UPDATE DRUGS SET SideEffects=?, Company=? WHERE Name=?";
             PreparedStatement p=conn.prepareStatement(s);
             p.setString(1, sides);
