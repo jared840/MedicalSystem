@@ -39,7 +39,7 @@ public class SearchDrugDocServ extends HttpServlet {
 		response.setContentType("text/html");
 		PrintWriter out=response.getWriter();
 			try {
-			Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/medicalSystem", "root", "vick-newton7.1");
+			Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/medicalSystem", "root", "password");
 			
 			 String query="SELECT * FROM DRUGS WHERE Name=?";
 				PreparedStatement prep=conn.prepareStatement(query);
