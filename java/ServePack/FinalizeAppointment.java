@@ -79,7 +79,7 @@ public class FinalizeAppointment extends HttpServlet {
 			for(int thru=4;thru<docselect.length();thru++) {
 				realdoc+=docselect.charAt(thru);
 			}
-			Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/medicalSystem", "root", "vick-newton7.1");
+			Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/medicalSystem", "root", "password");
 
 			String the_query="SELECT ID, Username FROM DOCTOR WHERE LName=? AND ClinicName=?";
 			PreparedStatement ppp=conn.prepareStatement(the_query);
