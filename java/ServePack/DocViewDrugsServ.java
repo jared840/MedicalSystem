@@ -42,7 +42,7 @@ public class DocViewDrugsServ extends HttpServlet {
 		out.println("<style type=text/css> body{ background-color:#D2BD96;} </style> ");
 		
 		try {
-			 Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/medicalSystem", "root", "vick-newton7.1");
+			 Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/medicalSystem", "root", "password");
 				
 			 String query="SELECT * FROM DRUGS";
 				PreparedStatement prep=conn.prepareStatement(query);
