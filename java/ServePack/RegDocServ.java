@@ -83,7 +83,7 @@ public class RegDocServ extends HttpServlet {
 			
 			
 			 /*Class.forName("com.mysql.cj.jdbc.Driver");
-			 Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/medicalSystem", "root", "vick-newton7.1");
+			 Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/medicalSystem", "root", "password");
 			 if(conn==null) {
 					outgoing.println("NULL connect");
 
@@ -172,7 +172,7 @@ public class RegDocServ extends HttpServlet {
 			//new again:
 			//!!!!!!!MUST CHECK COUNT(*) FOR USERNAME!!!
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			 Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/medicalSystem", "root", "vick-newton7.1");
+			 Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/medicalSystem", "root", "password");
 			
 			 String query="INSERT INTO DOCTOR VALUES(?,?,?,?,?,?,?,?,?,?,?)";
 				PreparedStatement prep=conn.prepareStatement(query);
