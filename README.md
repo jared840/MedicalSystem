@@ -1,5 +1,4 @@
-# FinalProject_CPSC471_Group43
-Group 43 (Jared Lundy, Jordan Lundy, Yuhao Guang) Final Project for Cpsc 471.
+# Final Project Medical System
 
 Project and all code created and completed by Jared Lundy, Jordan Lundy & Yuhao Guang.
 
